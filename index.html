@@ -198,8 +198,8 @@
 
         <h2> Ablation study on different blurring components</h2>
         <div class ="boxed">
-            <p> We selected five sentences and generated audio samples with varying blurring components for each. 
-                The audio samples in the second column were created by adding linguistic perturbation only. 
+            <p> We select five sentences and generate audio samples with varying blurring components for each. 
+                The audio samples in the second column are created by adding linguistic perturbation only. 
                 The subsequent three columns feature audio samples generated using a single blurring component. 
                 The final column includes audio samples produced using all blurring components, 
                 except for linguistic perturbation.
@@ -345,8 +345,8 @@
         <h2> User study </h2>
         <h3> User study on audio incomprehensibility </h3>
         <div class ="boxed">
-            <p> We performed a user study (6 volunteers who evaluated 12 ALIF samples on a 0-4 intelligibility scale).
-                Results showed an average intelligibility score of 0.84, confirming their incomprehensibility.
+            <p> We perform a user study (6 volunteers who evaluated 12 ALIF samples on a 0-4 intelligibility scale and transcribed them). 
+                Results show an average intelligibility score of 0.84 and a 78% CER, confirming their incomprehensibility.
             </p>
         </div>
         <div style="margin-top=5em;margin-left:-15em;margin-right:auto;">
@@ -495,31 +495,6 @@
                 </tr>
             </table>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2> Robustness of commercial ASRs </h2>
-        <div class ="boxed">
-            <p> We utilized 200 event noise instances to evaluate the ASRs' robustness, resulting in a similar result to the white noise case. 
-                Google is the most vulnerable one.
-            </p>
-        </div>
-        <h3> Robustness to white noise </h3>
-        <div class ="boxed">
-            <!--img src="assets/introduction_system.pdf" width="800px" height="300px"-->
-            <img src="assets/white_robustness.png", width="800px" height="300px">
-    
-        </div>
-
-        <h3> Robustness to event noise </h3>
-        <div class ="boxed">
-            <!--img src="assets/introduction_system.pdf" width="800px" height="300px"-->
-            <img src="assets/noise_robustness.png", width="800px" height="300px">
-    
-        </div>
-        <br>
-        <br>
         <br>
         <br>
         <div style="margin-top=5em;margin-left:-15em;margin-right:auto;">
@@ -672,7 +647,7 @@
         <br>
         <h3> User study on ablation </h3>
         <div class ="boxed">
-            <p> We ablate blurring components and gathered volunteer opinions on the audios. 
+            <p> We ablate blurring components and gather volunteers' opinions on the audios. 
                 The results confirm that perturbations on linguistic features are the most crucial factor that affects human perception.
             </p>
         </div>
@@ -746,16 +721,39 @@
         <br>
         <br>
         <br>
+        <h2> Robustness of commercial ASRs </h2>
+        <div class ="boxed">
+            <p> We utilize 200 event noise instances to evaluate the ASRs' robustness, resulting in a similar result to the white noise case. 
+                Google is the most vulnerable one.
+            </p>
+        </div>
+        <h3> Robustness to white noise </h3>
+        <div class ="boxed">
+            <!--img src="assets/introduction_system.pdf" width="800px" height="300px"-->
+            <img src="assets/white_robustness.png", width="800px" height="300px">
+    
+        </div>
+
+        <h3> Robustness to event noise </h3>
+        <div class ="boxed">
+            <!--img src="assets/introduction_system.pdf" width="800px" height="300px"-->
+            <img src="assets/noise_robustness.png", width="800px" height="300px">
+    
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
         <h2> New commands </h2>
         <div class ="boxed">
-            <p> We choose 10 new commands ("Clear notification", "Play music"", "What's the weather", "Take a picture", "Where is my car", 
+            <p> We choose 10 new commands ("Clear notification", "Play music", "What's the weather", "Take a picture", "Where is my car", 
                 "Tell me a story", "How old are you", "Sing me happy birthday", "Good morning", "Where is my home") and generate the attack 
                 examples under the setting of α=0.3, β=22Hz, γ=1 and η=0.1 (η is only for OTA examples).
-                Then we attack APIs (Amazon, Azure, iflytek, and Tencent) in the digital domain and attack voice assistants (Amazon Echo and Microsoft Cortana) over the air, and the results are as follows. Attacks belonging to the xxx-online and xxx-offline columns are digital-domain attacks. Attacks belonging to the Echo and Cortana column are over-the-air (OTA) attacks. Commands used in OTA attacks are generated with the online method.
+                Then we attack APIs (Amazon, Azure, iFLYTEK, and Tencent) in the digital domain and attack voice assistants (Amazon Echo and Microsoft Cortana) over the air, and the results are shown below. Attacks belonging to the xxx-online and xxx-offline columns are digital-domain attacks. Attacks belonging to the Echo and Cortana column are over-the-air (OTA) attacks. Commands used in OTA attacks are generated with the online method.
 
             <br>
             <br>
-            &#9733 <font size="4"> <b>Note:</b> </font> The <b>online</b> terminology (generating one command requires at most 50 queries) means in the iterating progress of command generation, we inquire about the target APl with the audio given a new smaller loss is obtained. In contrast, the <b>offline</b> terminology (generating one command requires only 1 query) means we only query the APl once at the last iteration round during command generation to check wheather it is valid.
+            &#9733 <font size="4"> <b>Note:</b> </font> The <b>online</b> terminology (generating one command requires at most 50 queries) means in the iterating progress of command generation, we inquire about the target API with the audio given a new smaller loss is obtained. In contrast, the <b>offline</b> terminology (generating one command requires only 1 query) means we only query the API once at the last iteration round during command generation to check whether it is valid.
             </p>
         </div>
         <div style="margin-top=5em;margin-left:-5em;margin-right:auto;">
@@ -765,8 +763,8 @@
                     <td> Amazon-offline </td>
                     <td> Azure-online </td>
                     <td> Azure-offline </td>
-                    <td> iFlytek-online </td>
-                    <td> iFlytek-offline </td>
+                    <td> iFLYTEK-online </td>
+                    <td> iFLYTEK-offline </td>
                     <td> Tencent-online </td>
                     <td> Tencent-offline </td>
                 </tr>
@@ -804,9 +802,9 @@
         <br>
         <h2> Impact of ambient noise </h2>
         <div class ="boxed">
-            <p> We assessed the impact of ambient noise, revealing that our examples perform well at an SNR of ~20, 
+            <p> We assess the impact of ambient noise, revealing that our examples perform well at an SNR of ~20, 
                 akin to soft speech, but decline with higher ambient noise. 
-                ( α=0.3, β=22Hz, γ=1 and η=0.1, distence between speaker (marshall) and VA is 15cm)
+                ( α=0.3, β=22Hz, γ=1 and η=0.1, distence between the speaker (Marshall) and the VA is 15 cm)
             </p>
         </div>
         <div style="margin-top=5em;margin-left:-10em;margin-right:auto;">
@@ -842,13 +840,13 @@
         <h2>  Potential defense </h2>
         <div class ="boxed">
             <p> In addition to the downsampling method presented in the paper, 
-                we conducted further tests on other three possible defense methods: 
+                we conduct further tests on the other three possible defense methods: 
                 applying a 4000Hz low-pass filter, a 5000Hz low-pass filter, 
                 and a 500 Hz high-pass filter to the audio. 
                 The results in the following table show that all these three methods 
                 can effectively defend against our attack. 
-                Specifically, the 500Hz high-pass filter performs the best, 
-                with which only 1, 3, 2, and 0 attack commands could be recognized successfully by corresponding ASR.
+                Specifically, the 500Hz high-pass filter exhibits the best performance, 
+                with only 1, 3, 2, and 0 attack commands being accurately recognized by the corresponding ASR.
             </p>
         </div>
         <div style="margin-top=5em;margin-left:-10em;margin-right:auto;">
@@ -861,7 +859,7 @@
                     <td> IFLYTEK </td>
                 </tr>
                 <tr>
-                    <td> High-Pass Filter:500Hz  </td>
+                    <td> High-Pass Filter: 500Hz  </td>
                     <td> 1/12 </td>
                     <td> 3/10 </td>
                     <td> 2/11 </td>
