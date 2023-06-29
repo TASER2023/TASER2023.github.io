@@ -751,10 +751,11 @@
             <p> We choose 10 new commands ("Clear notification", "Play music"", "What's the weather", "Take a picture", "Where is my car", 
                 "Tell me a story", "How old are you", "Sing me happy birthday", "Good morning", "Where is my home") and generate the attack 
                 examples under the setting of α=0.3, β=22Hz, γ=1 and η=0.1 (η is only for OTA examples).
-                Then we attack APIs in the digital domain (<b>online and offline</b>) and voice assistants (Amazon Echo and Microsoft Cortana) <b>over the air</b>, and the results are as follows. Both online and offline attacks are digital-domain attacks.
+                Then we attack APIs (Amazon, Azure, iflytek, and Tencent) in the digital domain and attack voice assistants (Amazon Echo and Microsoft Cortana) over the air, and the results are as follows. Attacks belonging to the xxx-online and xxx-offline columns are digital-domain attacks. Attacks belonging to the Echo and Cortana column are over-the-air (OTA) attacks. Commands used in OTA attacks are generated with the online method.
+
             <br>
             <br>
-            &#9733 <font size="4"> <b>Note:</b> </font> The online attack (generating one command requires 50 queries) means in the iterating progress of command generation, we inquire about the target APl with the audio given a new smaller loss is obtained. In contrast, the offline attack (generating one command requires only 1 query) means we only query the APl once at the last iteration round during command generation.
+            &#9733 <font size="4"> <b>Note:</b> </font> The <b>online</b> terminology (generating one command requires at most 50 queries) means in the iterating progress of command generation, we inquire about the target APl with the audio given a new smaller loss is obtained. In contrast, the <b>offline</b> terminology (generating one command requires only 1 query) means we only query the APl once at the last iteration round during command generation to check wheather it is valid.
             </p>
         </div>
         <div style="margin-top=5em;margin-left:-5em;margin-right:auto;">
